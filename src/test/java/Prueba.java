@@ -1,4 +1,5 @@
 import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 public class Prueba {
@@ -13,6 +14,7 @@ public class Prueba {
     public int [][] matrizT;
     public String [] quizasletra;
     public  Boolean[] isletra;
+    public int[] temperaturas;
 
     @Test
     public void palindromoTest() {
@@ -57,5 +59,28 @@ public class Prueba {
         for (int m=0; m<3; m++){
             Assertions.assertEquals(Act1.esLetra(quizasletra[m]),isletra[m]);
         }
+    }
+    @Test
+    public void promedioTemperaturaTest(){
+        temperaturas = new int[] {1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24};
+        Assertions.assertEquals(Act2.temperaturaPromedio(temperaturas),12.5);
+    }
+
+    @BeforeEach
+    public void setUp() {
+        temperaturas = new int[]{3, 5, 25, -8, 4};
+    }
+    @Test
+    public void temperaturaMenorTest(){
+        Assertions.assertEquals(Act2.temperaturaMenor(temperaturas),-8);
+    } //esta prueba quedó obsoleta, pero funcionó bien
+    @Test
+    public void temperaturaMayorTest(){
+        Assertions.assertEquals(Act2.mayorTemperatura(temperaturas),25);
+    } //lo mismo con esta
+    @Test
+    public void promedioSemanaTest(){
+        matriz = new int[][] {{24},{48},{72},{96},{120},{144},{168}};
+        Assertions.assertEquals(Act2.promedioSemana(matriz),4);
     }
 }
