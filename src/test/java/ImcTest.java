@@ -11,4 +11,22 @@ public class ImcTest {
             Assertions.assertEquals(Imc.verificarNumero(numero[i]),resultado[i]);
         }
     }
+
+    @Test
+    public void testalturaValida(){
+        int[] altura = {5, 100, 180, 200};
+        boolean[] resultado = {false, true, true, false};
+        for (int i = 0; i<4; i++) {
+            Assertions.assertEquals(Imc.alturaValida(altura[i]), resultado[i]);
+        }
+    }
+
+    @Test
+    public void testpesoValido(){
+        int[] peso = {5, 20, 150, 200};
+        boolean[] resultado = {false, true, true, false};
+            for (int i = 0; i<4; i++) {
+                Assertions.assertEquals(Imc.pesoValido(peso[i]), resultado[i]);
+            }
+    }
 }
