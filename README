@@ -1,0 +1,9 @@
+Ayudantía 2
+me hubiera gustado dejar los métodos como privados, pero no hallé cómo realizar
+las pruebas unitarias sin dejarlas como públicos
+
+tengo sueño
+
+no realicé pruebas extremas sobre los métodos que validaban una altura/peso como "normales",
+ya que estos métodos trabajaban sobre los datos que ya habían sido verificados por
+métodos anteriores como números
