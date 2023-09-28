@@ -15,36 +15,27 @@ public class Libro {
         return Editorial;
     }
 
-    public Libro (){
+    protected Libro (){
         this.Autor = "Autor";
         this.Editorial = "Editorial";
         this.Nombre = "Nombre";
     }
 
-    public Libro (String autor, String editorial, String nombre){
+    protected Libro (String autor, String editorial, String nombre){
         this.Autor = autor;
         this.Editorial = editorial;
         this.Nombre = nombre;
     }
 
-    public void setAutor(String autor) {
-        if (Autor.equals(autor)) {
-            Autor = autor;
-            System.out.println("Autor establecido correctamente.");
-        } else System.out.println("Autor ya registrado anteriormente.");
+    private void setAutor(String autor) {
+        Autor = autor;
     }
 
-    public void setEditorial(String editorial) {
-        if (Editorial.equals(editorial)) {
-            Editorial = editorial;
-            System.out.println("Editorial establecida correctamente.");
-        } else System.out.println("Editorial ya registrada anteriormente.");
+    protected void setEditorial(String editorial) {
+        Editorial = editorial;
     }
 
-    public void setNombre(String nombre) {
-        if (Nombre.equals(nombre)) {
-            Nombre = nombre;
-            System.out.println("Nombre establecido correctamente.");
-        } else System.out.println("Nombre ya registrado anteriormente.");
+    protected void setNombre(String nombre) {
+        Nombre = nombre;
     }
 }
